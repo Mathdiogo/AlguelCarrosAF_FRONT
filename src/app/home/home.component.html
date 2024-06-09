@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div class="container mt-4">
+            <h1 class="text-center">Carros Disponíveis para Aluguel</h1>
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="carSection">
+                <!-- SUVs -->
+                <div class="col" *ngFor="let item of items">
+                    <div class="card mb-4">
+                        <img src="{{ item.file }}" class="card-img-top" alt="SUV 1">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.categoria}}</h5>
+                            <p class="card-text">Modelo: {{item.modelo}}</p>
+                            <p class="card-text">Motor: {{item.motor}}</p>
+                            <p class="card-text">Preço por Dia: {{item.precoPorDia}}</p>
+                            <p class="card-text">Preço por Mês: {{item.precoPorMes}}</p>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <button href="#" class="btn" [class.btn-primary]="!item.alugado" [class.btn-danger]="item.alugado" [disabled]="item.alugado" (click)="alugarCarro(item.id, item.precoPorDia, item.precoPorMes)">{{item.alugado ? 'Alugado' : 'Alugar'}}</button>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-secondary" (click)="deleteCar(item.id)">Deletar carro</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

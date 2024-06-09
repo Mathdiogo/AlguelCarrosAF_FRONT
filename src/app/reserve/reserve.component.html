@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alugar carros</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center">Formulário de Contato</h1>
+    
+        <form id="rentalForm">
+            <div class="mb-3">
+                <label for="dias" class="form-label">Número de Dias para Aluguel:</label>
+                <input type="number" class="form-control" id="dias" name="dias" required [(ngModel)]="dias">
+            </div>
+    
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome Completo:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+    
+            <div class="mb-3">
+                <label for="email" class="form-label">Endereço de Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="email">
+            </div>
+    
+            <div class="mb-3">
+                <label for="cellphone" class="form-label">Número de Celular:</label>
+                <input type="tel" class="form-control" id="cellphone" name="cellphone" required>
+            </div>
+    
+            <input type="hidden" id="basePricePerDay" value="150">
+            <input type="hidden" id="basePricePerMonth" value="3000">
+    
+            <input type="hidden" id="selectedCarModel" name="selectedCarModel" value="">
+    
+            <button type="button" class="btn btn-primary" (click)="calcPreco(dias)">Calcular Preço</button>
+
+            <button type="button" class="btn btn-secondary" (click)="alugarCarro(email)">Alugar Carro</button>
+
+            
+            <p>Preço Total: R$ {{ precoPorDia }}</p>
+        </form>
+    </div>
+</body>
+</html>

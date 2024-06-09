@@ -1,0 +1,97 @@
+
+
+.sedan-card {
+    background-color: #e6ffe621;
+    border: 1px solid #ffffff;
+}
+
+.card{
+    transition: transform .2s;
+    
+}
+.card:hover {
+    transform: scale(1.05); 
+  }
+
+
+body, h1, h2, h3, p, img, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+
+     
+    background: linear-gradient(to right, #07ca5f, #008CBA);
+    
+        color: #ffffff;
+    
+}
+
+
+header {
+    padding: 1rem;
+}
+
+.navbar-brand:hover {
+    font-size: 1.5rem;
+    transform: scale(1.05);
+}
+
+
+.container {
+    margin-top: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+}
+
+
+footer {
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.card {
+    background-color: #03284d; 
+    color: #ffffff; 
+    transition: transform 0.2s;
+    border: none; 
+}
+
+.card-text {
+    color: #ffffff; 
+}
+
+
+.btn-primary {
+    background-color: #007bff; 
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; 
+}
+
+.forms{
+    font-family: 'Arial', sans-serif;
+
+     
+    background: linear-gradient(to right, #07ca5f, #008CBA);
+    
+        color: #ffffff;
+    
+}
